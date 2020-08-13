@@ -1,4 +1,5 @@
-'use strict'
+'use strict';
+
 import item from './item.js';
 
 
@@ -36,6 +37,10 @@ function findAndDelete (id) {
     this.items.splice(findById(id), 1);
 }
 
+function toggleCheckedFilter() {
+    this.hideCheckedItems = !this.hideCheckedItems;
+}
+
 export default {
   items,
   hideCheckedItems,
@@ -44,4 +49,5 @@ export default {
   findAndToggleChecked,
   findAndUpdateName,
   findAndDelete,
+  toggleCheckedFilter,
 };
