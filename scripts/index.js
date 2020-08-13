@@ -17,5 +17,5 @@ store.addItem('rice');
 let id = store.items[0].id;
 // delete this item from the store
 store.findAndDelete(id);
-shoppingList.render();
+//shoppingList.render();
 console.log(store.items);

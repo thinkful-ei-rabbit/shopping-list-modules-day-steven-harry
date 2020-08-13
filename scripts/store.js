@@ -6,7 +6,7 @@ let items = [];
 let hideCheckedItems = false;
 
 function findById (id) {
-  return items.find(item => item.id === id);
+  return items.findIndex(item => item.id === id);
 }
 
 function addItem (name) {
@@ -26,15 +26,14 @@ function findAndToggleChecked (id) {
 function findAndUpdateName(id, newName) {
   try {
       item.validateName(newName);
-      this.findById(id).name = newName;
+      this.item[findById(id)].name = newName;
   } catch(e) {
     console.log(`error ${error.message}`);
   }
 }
 
 function findAndDelete (id) {
-    let itemToDelete = findById(id);
-    this.items.splice(itemToDelete);
+    this.items.splice(findById(id), 1);
 }
 
 export default {
