@@ -19,14 +19,14 @@ function addItem (name) {
 }
 
 function findAndToggleChecked (id) {
-  let target = this.findById(id);
+  let target = this.items[findById(id)];
   target.checked = !target.checked;
 }
 
 function findAndUpdateName(id, newName) {
   try {
       item.validateName(newName);
-      this.item[findById(id)].name = newName;
+      this.items[findById(id)].name = newName;
   } catch(e) {
     console.log(`error ${error.message}`);
   }
